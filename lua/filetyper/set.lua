@@ -1,29 +1,20 @@
-local pickers = require("telescope.pickers")
-local finders = require("telescope.finders")
-local config = require("telescope.config").values
-local actions = require("telescope.actions")
-local actions_state = require("telescope.actions.state")
+local Config = require("filetyper.config")
 
 local M = {}
 
-function M.select_filetype(opts)
+function M.select_filetype()
+	local opts = Config.options or Config.defaults
 
-	opts = opts or {}
-	pickers.new(opts, {
-			finder = finders.new_table({
-				results = { "json", "lua" },
-			}),
-			sorter = config.generic_sorter(opts),
-			attach_mappings = function(bufnumber, map)
-				actions.select_default:replace(function()
-					actions.close(bufnumber)
-					local selection = actions_state.get_selected_entry()
-					vim.cmd("set ft=" .. selection.value)
-				end)
-				return true
-			end,
-		})
-		:find()
+	local filetypes = opts.filetypes or vim.fn.getcompletion("", "filetype")
+
+	vim.ui.select(filetypes, {
+		prompt = "Set filetype",
+		format_item = function(item)
+			return item
+		end,
+	}, function(choice)
+		vim.cmd("set ft=" .. choice)
+	end)
 end
 
 return M

@@ -12,6 +12,7 @@ function M.select_filetype()
 		format_item = function(item)
 			return item
 		end,
+		kind = "filetyper",
 	}, function(choice)
 		vim.cmd("set ft=" .. choice)
 	end)

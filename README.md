@@ -63,9 +63,11 @@ To enable this feature, follow these steps:
 1. Install Required Plugins:
 
 	Install the [dressing](https://github.com/stevearc/dressing.nvim) plugin.
+ 
 	Install the [ fzf_lua ](https://github.com/ibhagwan/fzf-lua) plugin for displaying results.
 
-2. Configuration:
+3. Configuration:
+ 
 	After installing the plugins, configure them as follows:
 
 ```lua

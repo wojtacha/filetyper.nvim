@@ -28,6 +28,9 @@ Install the plugin with your preferred package manager:
 }
 ```
 
+### 🔭 `:FiletyperTelescope`
+This plugin uses vim.ui by default. If [telescope-ui-select.nvim](https://github.com/nvim-telescope/telescope-ui-select.nvim) is installed, it will override the default; alternatively, you can use dressing.nvim as described above.
+
 ## ⚙️ Configuration
 
 Filetyper comes with the following config defaults:
@@ -91,11 +94,11 @@ require('dressing').setup({
 :FiletyperToggle
 ```
 
-### 🔭 `:FiletyperTelescope`
-This plugin uses vim.ui as default option if you have telescope it will be used instead of default
 
 ### 🔎 `:FiletyperQuickFix`
+TBD
 
 ### 🔎 `:FiletyperLocList`
+TBD
 
 

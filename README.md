@@ -54,13 +54,21 @@ Set keybinding for toggle command
   vim.keymap.set("n", "<leader>t", "<cmd>FiletyperToggle<cr>", { desc = "Toggle Filetyper" })
 ```
 
-Change window for select your filetype
-this feature is provided by awesome [dressing](https://github.com/stevearc/dressing.nvim) plugin
+####Change Window for Selecting File Type
+This feature is made possible by the awesome [dressing](https://github.com/stevearc/dressing.nvim) plugin, which enhances the user interface for selecting file types and other prompts.
 
-first install dressing.nvim and then configure it like this
+To enable this feature, follow these steps:
+
+1. Install Required Plugins:
+
+Install the [dressing](https://github.com/stevearc/dressing.nvim) plugin.
+Install the [ fzf_lua ](https://github.com/ibhagwan/fzf-lua) plugin for displaying results.
+
+2. Configuration:
+After installing the plugins, configure them as follows:
 
 ```lua
-``require('dressing').setup({
+require('dressing').setup({
   select = {
     get_config = function(opts)
       if opts.kind == 'filetyper' then
@@ -71,7 +79,8 @@ first install dressing.nvim and then configure it like this
       end
     end
   }
-})`
+})
+```
 
 ## 🚀 Usage
 

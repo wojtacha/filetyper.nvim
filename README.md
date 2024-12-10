@@ -5,9 +5,9 @@ Have you ever had a problem with piping output to Vim with someawesomecommand | 
 ## ✨ Features
 
 - search types with [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+- or any other backend (feature provived by dressing.nvim)
 
 ## ⚡️ Requirements
-
 None for now
 
 ## 📦 Installation
@@ -29,7 +29,7 @@ Install the plugin with your preferred package manager:
 ```
 
 ### 🔭 `:FiletyperTelescope`
-This plugin uses vim.ui by default. If [telescope-ui-select.nvim](https://github.com/nvim-telescope/telescope-ui-select.nvim) is installed, it will override the default; alternatively, you can use dressing.nvim as described above.
+This plugin uses vim.ui by default. If [telescope-ui-select.nvim](https://github.com/nvim-telescope/telescope-ui-select.nvim) is installed, it will override the default; alternatively, you can use dressing.nvim as described below.
 
 ## ⚙️ Configuration
 
@@ -37,7 +37,7 @@ Filetyper comes with the following config defaults:
 
 ```lua
 {
-  filetypes = { "json", "lua", "xml", "yaml" },
+  filetypes = { "json", "toml", "xml", "yaml" },
 }
 
 ```
